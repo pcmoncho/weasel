@@ -1,0 +1,21 @@
+{
+  "name": "weasel-service",
+  "version": "2.5.0",
+  "description": "service from weasel",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Pedro Cisternas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "method-override": "^2.3.5",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "request": "^2.67.0"
+  }
+}
