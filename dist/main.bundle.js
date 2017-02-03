@@ -37,15 +37,110 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ },
 
+/***/ 42:
+/***/ function(module, exports) {
+
+//# sourceMappingURL=C:/workspace/WEASEL PROYECT/weasel/src/folder.js.map
+
+/***/ },
+
+/***/ 43:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(711);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProcessService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ProcessService = (function () {
+    function ProcessService(_http) {
+        this._http = _http;
+        this._headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        this._options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: this._headers });
+    }
+    ProcessService.prototype.getFolder = function (name) {
+        return this._http.get("http://localhost:3002/weasel-api/list/folders/" + name, this._options).map(function (res) { return res.json(); });
+    };
+    ProcessService.prototype.import = function (name, addRest, folder) {
+        var body = JSON.stringify(folder);
+        return this._http.post("http://localhost:3002/weasel-api/import/folder/" + name + "/" + addRest, body, this._options).map(function (res) { return res.json(); });
+    };
+    ProcessService.prototype.createFolder = function (name, folder) {
+        var body = JSON.stringify(folder);
+        return this._http.post("http://localhost:3002/weasel-api/add/folder/" + name, body, this._options).map(function (res) { return res.json(); });
+    };
+    ProcessService.prototype.deleteFolder = function (name, folder) {
+        var body = JSON.stringify(folder);
+        return this._http.post("http://localhost:3002/weasel-api/delete/folder/" + name, body, this._options).map(function (res) { return res.json(); });
+    };
+    ProcessService.prototype.getRests = function () {
+        return this._http.get('http://localhost:3002/weasel-api/list/rests', this._options).map(function (res) { return res.json(); });
+    };
+    ProcessService.prototype.addRest = function (name, rest) {
+        var body = JSON.stringify(rest);
+        return this._http.post("http://localhost:3002/weasel-api/add/rest/" + name, body, this._options);
+    };
+    ProcessService.prototype.deleteRest = function (name, rest) {
+        var body = JSON.stringify(rest);
+        return this._http.post("http://localhost:3002/weasel-api/delete/rest/" + name, body, this._options).map(function (res) { return res.json(); });
+    };
+    ProcessService.prototype.removeRest = function (name, rest) {
+        var body = JSON.stringify(rest);
+        return this._http.post("http://localhost:3002/weasel-api/remove/rest/" + name, body, this._options).map(function (res) { return res.json(); });
+    };
+    ProcessService.prototype.addRestToFolder = function (name, rest) {
+        var body = JSON.stringify(rest);
+        return this._http.post("http://localhost:3002/weasel-api/add/rest-folder/" + name, body, this._options).map(function (res) { return res.json(); });
+    };
+    ProcessService.prototype.getOptions = function () {
+        return this._http.get('http://localhost:3002/weasel-api/list/options', this._options).map(function (res) { return res.json(); });
+    };
+    ProcessService.prototype.saveOptions = function (options) {
+        return this._http.post('http://localhost:3002/weasel-api/options', options, this._options).map(function (res) { return console.log(res); });
+    };
+    ProcessService.prototype.startServices = function (name) {
+        return this._http.get("http://localhost:3002/weasel-api/start/" + name, this._options).map(function (res) { return console.log(res); });
+    };
+    ProcessService.prototype.stopServices = function () {
+        return this._http.get('http://localhost:3002/weasel-api/kill', this._options).map(function (res) { return console.log(res); });
+    };
+    ProcessService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        return Promise.reject(error.message || error);
+    };
+    ProcessService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === 'function' && _a) || Object])
+    ], ProcessService);
+    return ProcessService;
+    var _a;
+}());
+//# sourceMappingURL=C:/workspace/WEASEL PROYECT/weasel/src/process.service.js.map
+
+/***/ },
+
 /***/ 515:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__process_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__folder__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__process_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__folder__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__folder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__folder__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -80,7 +175,8 @@ var AddComponent = (function () {
     AddComponent.prototype.createFolder = function () {
         var _this = this;
         this._processService.createFolder(this.folder.name, this._newFolder).subscribe(function (res) {
-            _this.folder.folders.push(_this._newFolder.name);
+            _this.folder = res;
+            console.log("ADD CREATE FOLDER " + _this.folder.folders);
             _this.folderChange.emit(_this.folder);
             _this.clean();
         });
@@ -220,7 +316,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list_list_component__ = __webpack_require__(523);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__rest_rest_component__ = __webpack_require__(525);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__add_add_component__ = __webpack_require__(515);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__process_service__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__process_service__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_router__ = __webpack_require__(505);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__folder_folder_component__ = __webpack_require__(520);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__ = __webpack_require__(521);
@@ -228,7 +324,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__switch_switch_component__ = __webpack_require__(527);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__search_search_component__ = __webpack_require__(526);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__byname_pipe__ = __webpack_require__(519);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ng2_toastr_ng2_toastr__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ng2_toastr_ng2_toastr__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17_ng2_toastr_ng2_toastr__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -303,8 +399,8 @@ var AppModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__folder__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return BreadcrumbComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -405,8 +501,8 @@ var BynamePipe = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__folder__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return FolderComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -432,11 +528,11 @@ var FolderComponent = (function () {
         };
     };
     FolderComponent.prototype.openConfirm = function (event) {
-        $('#confirmDeleteFolder').modal('show');
+        $("#confirmDeleteFolder-" + this.folder).modal('show');
         event.stopPropagation();
     };
     FolderComponent.prototype.closeConfirm = function (event) {
-        $('#confirmDeleteFolder').modal('hide');
+        $("#confirmDeleteFolder-" + this.folder).modal('hide');
         event.stopPropagation();
     };
     FolderComponent.prototype.delete = function (event) {
@@ -479,7 +575,7 @@ var FolderComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__folder__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__folder__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__folder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__folder__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return FooterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -534,6 +630,11 @@ var FooterComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__folder__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return HeaderComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -545,23 +646,94 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var HeaderComponent = (function () {
-    function HeaderComponent() {
+    function HeaderComponent(_processService, _toastr, _vcr) {
+        this._processService = _processService;
+        this._toastr = _toastr;
+        this._vcr = _vcr;
+        this.folderChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.reader = new FileReader();
+        this._toastr.setRootViewContainerRef(_vcr);
     }
     HeaderComponent.prototype.ngOnInit = function () {
     };
     HeaderComponent.prototype.openModal = function () {
         document.querySelector('.offcanvas').className = 'offcanvas open';
     };
+    HeaderComponent.prototype.export = function () {
+        this.download(this.folder.name + ".json", JSON.stringify(this.folder));
+    };
+    HeaderComponent.prototype.searchFile = function () {
+        document.querySelector('input').click();
+    };
+    HeaderComponent.prototype.download = function (filename, text) {
+        var pom = document.createElement('a');
+        pom.setAttribute('href', "data:text/plain;charset=utf-8, " + encodeURIComponent(text));
+        pom.setAttribute('download', filename);
+        if (document.createEvent) {
+            var event = document.createEvent('MouseEvents');
+            event.initEvent('click', true, true);
+            pom.dispatchEvent(event);
+        }
+        else {
+            pom.click();
+        }
+    };
+    HeaderComponent.prototype.import = function (importRest) {
+        var _this = this;
+        var _importRest = importRest ? '1' : '0';
+        $('#confirmIncludeRests').modal('hide');
+        $("#fileInput").val('');
+        this.dataReaded.folders.splice(0, this.dataReaded.folders.length);
+        this._processService.import(this.folder.name, _importRest, this.dataReaded).subscribe(function (data) {
+            if (data.error) {
+                _this._toastr.error(data.error);
+            }
+            else {
+                _this.folder = data;
+                _this.folderChange.emit(_this.folder);
+                $('#getRests').click();
+            }
+        });
+    };
+    HeaderComponent.prototype.fileChanged = function (event) {
+        var _this = this;
+        if (!this.reader.onload) {
+            this.reader.onload = function (event) {
+                _this.dataReaded = JSON.parse(event.target.result);
+                $('#confirmIncludeRests').modal('show');
+            };
+        }
+        this.reader.readAsText(event.target.files[0]);
+    };
+    HeaderComponent.prototype.getFileLater = function () {
+        console.log(this.myFileInput.nativeElement.files[0]);
+    };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__folder__["Folder"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__folder__["Folder"]) === 'function' && _a) || Object)
+    ], HeaderComponent.prototype, "folder", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(), 
+        __metadata('design:type', Object)
+    ], HeaderComponent.prototype, "folderChange", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('fileInput'), 
+        __metadata('design:type', (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === 'function' && _b) || Object)
+    ], HeaderComponent.prototype, "myFileInput", void 0);
     HeaderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-header',
             template: __webpack_require__(703),
             styles: [__webpack_require__(692)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr__["ToastsManager"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr__["ToastsManager"]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]) === 'function' && _e) || Object])
     ], HeaderComponent);
     return HeaderComponent;
+    var _a, _b, _c, _d, _e;
 }());
 //# sourceMappingURL=C:/workspace/WEASEL PROYECT/weasel/src/header.component.js.map
 
@@ -572,8 +744,8 @@ var HeaderComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__folder__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -641,10 +813,10 @@ var ListComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rest__ = __webpack_require__(524);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rest___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__rest__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__folder__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__folder__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__folder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__folder__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return RestComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -706,10 +878,10 @@ var RestComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__folder__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return SearchComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -814,8 +986,8 @@ var SearchComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__folder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__folder__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return SwitchComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -945,97 +1117,6 @@ var environment = {
 
 /***/ },
 
-/***/ 55:
-/***/ function(module, exports) {
-
-//# sourceMappingURL=C:/workspace/WEASEL PROYECT/weasel/src/folder.js.map
-
-/***/ },
-
-/***/ 56:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(314);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(711);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProcessService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var ProcessService = (function () {
-    function ProcessService(_http) {
-        this._http = _http;
-        this._headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
-        this._options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: this._headers });
-    }
-    ProcessService.prototype.getFolder = function (name) {
-        return this._http.get("http://localhost:3002/weasel-api/list/folders/" + name, this._options).map(function (res) { return res.json(); });
-    };
-    ProcessService.prototype.createFolder = function (name, folder) {
-        var body = JSON.stringify(folder);
-        return this._http.post("http://localhost:3002/weasel-api/add/folder/" + name, body, this._options);
-    };
-    ProcessService.prototype.deleteFolder = function (name, folder) {
-        var body = JSON.stringify(folder);
-        return this._http.post("http://localhost:3002/weasel-api/delete/folder/" + name, body, this._options).map(function (res) { return res.json(); });
-    };
-    ProcessService.prototype.getRests = function () {
-        return this._http.get('http://localhost:3002/weasel-api/list/rests', this._options).map(function (res) { return res.json(); });
-    };
-    ProcessService.prototype.addRest = function (name, rest) {
-        var body = JSON.stringify(rest);
-        return this._http.post("http://localhost:3002/weasel-api/add/rest/" + name, body, this._options);
-    };
-    ProcessService.prototype.deleteRest = function (name, rest) {
-        var body = JSON.stringify(rest);
-        return this._http.post("http://localhost:3002/weasel-api/delete/rest/" + name, body, this._options).map(function (res) { return res.json(); });
-    };
-    ProcessService.prototype.removeRest = function (name, rest) {
-        var body = JSON.stringify(rest);
-        return this._http.post("http://localhost:3002/weasel-api/remove/rest/" + name, body, this._options).map(function (res) { return res.json(); });
-    };
-    ProcessService.prototype.addRestToFolder = function (name, rest) {
-        var body = JSON.stringify(rest);
-        return this._http.post("http://localhost:3002/weasel-api/add/rest-folder/" + name, body, this._options).map(function (res) { return res.json(); });
-    };
-    ProcessService.prototype.getOptions = function () {
-        return this._http.get('http://localhost:3002/weasel-api/list/options', this._options).map(function (res) { return res.json(); });
-    };
-    ProcessService.prototype.saveOptions = function (options) {
-        return this._http.post('http://localhost:3002/weasel-api/options', options, this._options).map(function (res) { return console.log(res); });
-    };
-    ProcessService.prototype.startServices = function (name) {
-        return this._http.get("http://localhost:3002/weasel-api/start/" + name, this._options).map(function (res) { return console.log(res); });
-    };
-    ProcessService.prototype.stopServices = function () {
-        return this._http.get('http://localhost:3002/weasel-api/kill', this._options).map(function (res) { return console.log(res); });
-    };
-    ProcessService.prototype.handleError = function (error) {
-        console.error('An error occurred', error); // for demo purposes only
-        return Promise.reject(error.message || error);
-    };
-    ProcessService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === 'function' && _a) || Object])
-    ], ProcessService);
-    return ProcessService;
-    var _a;
-}());
-//# sourceMappingURL=C:/workspace/WEASEL PROYECT/weasel/src/process.service.js.map
-
-/***/ },
-
 /***/ 687:
 /***/ function(module, exports) {
 
@@ -1074,7 +1155,7 @@ module.exports = "i{\r\n  cursor: pointer;\r\n}\r\n"
 /***/ 692:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = ".submenu{\r\n  height: 38px;\r\n  padding-bottom: 0px;\r\n  padding-top: 0px;\r\n}\r\n"
 
 /***/ },
 
@@ -1116,7 +1197,7 @@ module.exports = "\r\n<!-- Create Folder -->\r\n<div class=\"modal fade\" id=\"f
 /***/ 699:
 /***/ function(module, exports) {
 
-module.exports = "<app-header></app-header>\r\n<body class=\"p-5\">\r\n  <!--<router-outlet></router-outlet>-->\r\n  <app-list [folder]=\"$folder\" (folderChange)=\"folderChange($event)\"></app-list>\r\n</body>\r\n<app-footer [directories]=\"breadcrumb\" [folder]=\"$folder\" (folderChange)=\"$folder=$event\"></app-footer>\r\n\r\n<app-search [folder]=\"$folder\" (folderChange)=\"$folder=$event\"></app-search>\r\n"
+module.exports = "<app-header [folder]=\"$folder\" (folderChange)=\"$folder=$event\"></app-header>\r\n<body class=\"p-5\">\r\n  <!--<router-outlet></router-outlet>-->\r\n  <app-list [folder]=\"$folder\" (folderChange)=\"folderChange($event)\"></app-list>\r\n</body>\r\n<app-footer [directories]=\"breadcrumb\" [folder]=\"$folder\" (folderChange)=\"$folder=$event\"></app-footer>\r\n\r\n<app-search [folder]=\"$folder\" (folderChange)=\"$folder=$event\"></app-search>\r\n"
 
 /***/ },
 
@@ -1130,7 +1211,7 @@ module.exports = "<nav class=\"breadcrumb\">\r\n  <ol *ngFor=\"let directory of 
 /***/ 701:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-11\">\r\n    <h4 class=\"\">{{folder}}</h4>\r\n  </div>\r\n  <div class=\"col-md-1\">\r\n    <i class=\"fa fa-times grey fa-1\" (click)=\"openConfirm($event)\"></i>\r\n  </div>\r\n</div>\r\n<hr>\r\n\r\n<!-- Modal de confirmación -->\r\n<div class=\"modal fade\" id=\"confirmDeleteFolder\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">¿Está seguro que desea eliminar todo el contenido?</label>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-error\" (click)=\"delete($event)\">Aceptar</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeConfirm($event)\">Cancelar</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-11\">\r\n    <h4 class=\"\">{{folder}}</h4>\r\n  </div>\r\n  <div class=\"col-md-1\">\r\n    <i class=\"fa fa-times grey fa-1\" (click)=\"openConfirm($event)\"></i>\r\n  </div>\r\n</div>\r\n<hr>\r\n\r\n<!-- Modal de confirmación -->\r\n<div class=\"modal fade\" id=\"confirmDeleteFolder-{{folder}}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">¿Está seguro que desea eliminar todo el contenido?</label>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-error\" (click)=\"delete($event)\">Aceptar</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeConfirm($event)\">Cancelar</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ },
 
@@ -1144,7 +1225,7 @@ module.exports = "<nav class=\"navbar fixed-bottom navbar-inverse bg-inverse\">\
 /***/ 703:
 /***/ function(module, exports) {
 
-module.exports = "<header>\r\n    <nav class=\"navbar navbar-toggleable-md navbar-inverse bg-inverse\">\r\n    <div class=\"row\">\r\n      <div class=\"col\">\r\n        <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n          <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n        <a class=\"navbar-brand\" href=\"#\">Weasel</a>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col\" align=\"right\">\r\n      <i class=\"fa fa-bars fa-2x text-white\" (click)=\"openModal()\"></i>\r\n    </div>\r\n  </nav>\r\n</header>\r\n"
+module.exports = "<header>\r\n  <nav class=\"navbar navbar-toggleable-md navbar-inverse bg-inverse\">\r\n    <div class=\"row\">\r\n      <div class=\"col\">\r\n        <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n          <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n        <a class=\"navbar-brand\" href=\"#\">Weasel</a>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col\" align=\"right\">\r\n      <i class=\"fa fa-bars fa-2x text-white\" (click)=\"openModal()\"></i>\r\n    </div>\r\n  </nav>\r\n  <nav class=\"navbar navbar-toggleable-md submenu bg-faded\" *ngIf=\"folder\">\r\n    <div class=\"col-md-10\">\r\n      <h4 class=\"text-muted\">{{folder.name}}</h4>\r\n    </div>\r\n\r\n    <div class=\"col-md-1\" align=\"right\">\r\n      <a href=\"#\" (click)=\"export()\">Export</a>\r\n    </div>\r\n    <div class=\"col-md-1\" align=\"right\">\r\n      <input id=\"fileInput\" type=\"file\" [hidden]=\"true\" (change)=\"fileChanged($event)\">\r\n      <a href=\"#\" (click)=\"searchFile()\">Import</a>\r\n    </div>\r\n  </nav>\r\n</header>\r\n\r\n<!-- Modal de confirmación -->\r\n<div class=\"modal fade\" id=\"confirmIncludeRests\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">¿Desea incluir los rest de esta importación a la lista?</label>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"import(true)\">Sí</button>\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"import(false)\">No</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ },
 
@@ -1165,7 +1246,7 @@ module.exports = "<div class=\"\">\r\n  <div class=\"row\">\r\n    <div class=\"
 /***/ 706:
 /***/ function(module, exports) {
 
-module.exports = "<!-- Modal de los botones añadir -->\r\n<app-add [folder]=\"folder\" (folderChange)=\"emitParent($event)\" (restChange)=\"getRests()\"></app-add>\r\n\r\n<!-- Off canvas del buscador -->\r\n<div class=\"offcanvas\">\r\n  <i class=\"fa fa-times fa-2x text-white\" (click)=\"dismiss()\"></i>\r\n  <div class=\"row mb-4\">\r\n    <div class=\"col\">\r\n      <div class=\"form-inline my-2 my-lg-0\">\r\n        <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" [(ngModel)]=\"nameFilter\">\r\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col\">\r\n      <div *ngFor=\"let rest of (rests | byname: nameFilter)\">\r\n\r\n        <div class=\"\" (click)=\"validateToAdd(rest)\">\r\n          <div class=\"row\">\r\n            <div class=\"col-md-10\">\r\n              <h4 class=\"\">{{rest.name}}</h4>\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n              <i><small class=\"text-danger\" (click)=\"openConfirm(rest, $event)\">Delete</small></i>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col\">\r\n              <p class=\"\">{{rest.path}}</p>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n      </div>\r\n      <hr>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Modal de confirmación -->\r\n<div class=\"modal fade\" id=\"confirmDeleteRest\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">Este servicio se eliminará de todos los directorios donde fue agregado ¿Está seguro que desea eliminarlo?</label>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-error\" (click)=\"deleteRest()\">Aceptar</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeConfirm()\">Cancelar</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<!-- Modal de los botones añadir -->\r\n<app-add [folder]=\"folder\" (folderChange)=\"emitParent($event)\" (restChange)=\"getRests()\"></app-add>\r\n\r\n<!-- Off canvas del buscador -->\r\n<div class=\"offcanvas\">\r\n  <i class=\"fa fa-times fa-2x text-white\" (click)=\"dismiss()\"></i>\r\n  <div class=\"row mb-4\">\r\n    <div class=\"col\">\r\n      <div class=\"form-inline my-2 my-lg-0\">\r\n        <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" [(ngModel)]=\"nameFilter\">\r\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col\">\r\n      <div *ngFor=\"let rest of (rests | byname: nameFilter)\">\r\n\r\n        <div class=\"\" (click)=\"validateToAdd(rest)\">\r\n          <div class=\"row\">\r\n            <div class=\"col-md-10\">\r\n              <h4 class=\"\">{{rest.name}}</h4>\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n              <i><small class=\"text-danger\" (click)=\"openConfirm(rest, $event)\">Delete</small></i>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col\">\r\n              <p class=\"\">{{rest.path}}</p>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n      </div>\r\n      <hr>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Modal de confirmación -->\r\n<div class=\"modal fade\" id=\"confirmDeleteRest\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">Este servicio se eliminará de todos los directorios donde fue agregado ¿Está seguro que desea eliminarlo?</label>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-error\" (click)=\"deleteRest()\">Aceptar</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeConfirm()\">Cancelar</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- ARREGLAR ESTA COCHINADA!!!!! -->\r\n<button id=\"getRests\" type=\"button\" name=\"button\" [hidden]=\"true\" (click)=\"getRests()\"></button>\r\n"
 
 /***/ },
 
