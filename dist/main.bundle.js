@@ -70,52 +70,54 @@ var ProcessService = (function () {
         this._http = _http;
         this._headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         this._options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: this._headers });
+        //private host: string = 'http://localhost:3002';
+        this.host = 'https://weasel.herokuapp.com';
     }
     ProcessService.prototype.getFolder = function (name) {
-        return this._http.get("http://localhost:3002/weasel-api/list/folders/" + name, this._options).map(function (res) { return res.json(); });
+        return this._http.get(this.host + "/weasel-api/list/folders/" + name, this._options).map(function (res) { return res.json(); });
     };
     ProcessService.prototype.import = function (name, addRest, folder) {
         var body = JSON.stringify(folder);
-        return this._http.post("http://localhost:3002/weasel-api/import/folder/" + name + "/" + addRest, body, this._options).map(function (res) { return res.json(); });
+        return this._http.post(this.host + "/weasel-api/import/folder/" + name + "/" + addRest, body, this._options).map(function (res) { return res.json(); });
     };
     ProcessService.prototype.createFolder = function (name, folder) {
         var body = JSON.stringify(folder);
-        return this._http.post("http://localhost:3002/weasel-api/add/folder/" + name, body, this._options).map(function (res) { return res.json(); });
+        return this._http.post(this.host + "/weasel-api/add/folder/" + name, body, this._options).map(function (res) { return res.json(); });
     };
     ProcessService.prototype.deleteFolder = function (name, folder) {
         var body = JSON.stringify(folder);
-        return this._http.post("http://localhost:3002/weasel-api/delete/folder/" + name, body, this._options).map(function (res) { return res.json(); });
+        return this._http.post(this.host + "/weasel-api/delete/folder/" + name, body, this._options).map(function (res) { return res.json(); });
     };
     ProcessService.prototype.getRests = function () {
-        return this._http.get('http://localhost:3002/weasel-api/list/rests', this._options).map(function (res) { return res.json(); });
+        return this._http.get(this.host + "/weasel-api/list/rests", this._options).map(function (res) { return res.json(); });
     };
     ProcessService.prototype.addRest = function (name, rest) {
         var body = JSON.stringify(rest);
-        return this._http.post("http://localhost:3002/weasel-api/add/rest/" + name, body, this._options);
+        return this._http.post(this.host + "/weasel-api/add/rest/" + name, body, this._options);
     };
     ProcessService.prototype.deleteRest = function (name, rest) {
         var body = JSON.stringify(rest);
-        return this._http.post("http://localhost:3002/weasel-api/delete/rest/" + name, body, this._options).map(function (res) { return res.json(); });
+        return this._http.post(this.host + "/weasel-api/delete/rest/" + name, body, this._options).map(function (res) { return res.json(); });
     };
     ProcessService.prototype.removeRest = function (name, rest) {
         var body = JSON.stringify(rest);
-        return this._http.post("http://localhost:3002/weasel-api/remove/rest/" + name, body, this._options).map(function (res) { return res.json(); });
+        return this._http.post(this.host + "/weasel-api/remove/rest/" + name, body, this._options).map(function (res) { return res.json(); });
     };
     ProcessService.prototype.addRestToFolder = function (name, rest) {
         var body = JSON.stringify(rest);
-        return this._http.post("http://localhost:3002/weasel-api/add/rest-folder/" + name, body, this._options).map(function (res) { return res.json(); });
+        return this._http.post(this.host + "/weasel-api/add/rest-folder/" + name, body, this._options).map(function (res) { return res.json(); });
     };
     ProcessService.prototype.getOptions = function () {
-        return this._http.get('http://localhost:3002/weasel-api/list/options', this._options).map(function (res) { return res.json(); });
+        return this._http.get(this.host + "/weasel-api/list/options", this._options).map(function (res) { return res.json(); });
     };
     ProcessService.prototype.saveOptions = function (options) {
-        return this._http.post('http://localhost:3002/weasel-api/options', options, this._options).map(function (res) { return console.log(res); });
+        return this._http.post(this.host + "/weasel-api/options", options, this._options).map(function (res) { return console.log(res); });
     };
     ProcessService.prototype.startServices = function (name) {
-        return this._http.get("http://localhost:3002/weasel-api/start/" + name, this._options).map(function (res) { return console.log(res); });
+        return this._http.get(this.host + "/weasel-api/start/" + name, this._options).map(function (res) { return console.log(res); });
     };
     ProcessService.prototype.stopServices = function () {
-        return this._http.get('http://localhost:3002/weasel-api/kill', this._options).map(function (res) { return console.log(res); });
+        return this._http.get(this.host + "/weasel-api/kill", this._options).map(function (res) { return console.log(res); });
     };
     ProcessService.prototype.handleError = function (error) {
         console.error('An error occurred', error); // for demo purposes only
