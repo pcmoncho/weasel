@@ -66,12 +66,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ProcessService = (function () {
+    //private host: string = 'https://weasel.herokuapp.com';
     function ProcessService(_http) {
         this._http = _http;
         this._headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         this._options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* RequestOptions */]({ headers: this._headers });
-        //private host: string = 'http://localhost:3002';
-        this.host = 'https://weasel.herokuapp.com';
+        this.host = 'http://localhost:3002';
     }
     ProcessService.prototype.getFolder = function (name) {
         return this._http.get(this.host + "/weasel-api/list/folders/" + name, this._options).map(function (res) { return res.json(); });
