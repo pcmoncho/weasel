@@ -18,11 +18,11 @@ webpackEmptyContext.id = 391;
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(529);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(530);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__polyfills_ts__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(485);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(528);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(529);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_app_module__ = __webpack_require__(517);
 
 
@@ -50,7 +50,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(314);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(711);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(712);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ProcessService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -144,6 +144,7 @@ var ProcessService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__process_service__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__folder__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__folder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__folder__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__constants_service__ = __webpack_require__(520);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AddComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -154,6 +155,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -170,6 +172,7 @@ var AddComponent = (function () {
         this._options = {
             port: ''
         };
+        this.statusList = new __WEBPACK_IMPORTED_MODULE_4__constants_service__["a" /* ConstantsService */]();
         this.getOptions();
     }
     AddComponent.prototype.ngOnInit = function () {
@@ -234,6 +237,7 @@ var AddComponent = (function () {
         this._newRest = {
             name: '',
             path: '',
+            status: 200,
             response: ''
         };
     };
@@ -252,8 +256,8 @@ var AddComponent = (function () {
     AddComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-add',
-            template: __webpack_require__(698),
-            styles: [__webpack_require__(687)]
+            template: __webpack_require__(699),
+            styles: [__webpack_require__(688)]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__process_service__["a" /* ProcessService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__process_service__["a" /* ProcessService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr__["ToastsManager"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ng2_toastr_ng2_toastr__["ToastsManager"]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]) === 'function' && _d) || Object])
     ], AddComponent);
@@ -294,8 +298,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(699),
-            styles: [__webpack_require__(688)]
+            template: __webpack_require__(700),
+            styles: [__webpack_require__(689)]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
@@ -314,17 +318,17 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(476);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(516);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__header_header_component__ = __webpack_require__(522);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list_list_component__ = __webpack_require__(523);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__rest_rest_component__ = __webpack_require__(525);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__header_header_component__ = __webpack_require__(523);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list_list_component__ = __webpack_require__(524);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__rest_rest_component__ = __webpack_require__(526);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__add_add_component__ = __webpack_require__(515);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__process_service__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_router__ = __webpack_require__(505);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__folder_folder_component__ = __webpack_require__(520);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__ = __webpack_require__(521);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__folder_folder_component__ = __webpack_require__(521);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__ = __webpack_require__(522);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__breadcrumb_breadcrumb_component__ = __webpack_require__(518);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__switch_switch_component__ = __webpack_require__(527);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__search_search_component__ = __webpack_require__(526);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__switch_switch_component__ = __webpack_require__(528);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__search_search_component__ = __webpack_require__(527);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__byname_pipe__ = __webpack_require__(519);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ng2_toastr_ng2_toastr__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ng2_toastr_ng2_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17_ng2_toastr_ng2_toastr__);
@@ -451,8 +455,8 @@ var BreadcrumbComponent = (function () {
     BreadcrumbComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-breadcrumb',
-            template: __webpack_require__(700),
-            styles: [__webpack_require__(689)]
+            template: __webpack_require__(701),
+            styles: [__webpack_require__(690)]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */]) === 'function' && _b) || Object])
     ], BreadcrumbComponent);
@@ -499,6 +503,49 @@ var BynamePipe = (function () {
 /***/ },
 
 /***/ 520:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ConstantsService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ConstantsService = (function () {
+    function ConstantsService() {
+        this.LIST_STATUS = [{ 'name': 'OK', 'code': 200 },
+            { 'name': 'CREATED', 'code': 201 },
+            { 'name': 'ACCEPTED', 'code': 202 },
+            { 'name': 'NON_AUTHORITATIVE_INFORMATION', 'code': 203 },
+            { 'name': 'NO_CONTENT', 'code': 204 },
+            { 'name': 'BAD_REQUEST', 'code': 400 },
+            { 'name': 'UNAUTHORIZED', 'code': 401 },
+            { 'name': 'FORBIDDEN', 'code': 403 },
+            { 'name': 'NOT_FOUND', 'code': 404 },
+            { 'name': 'REQUEST_TIMEOUT', 'code': 408 },
+            { 'name': 'INTERNAL_SERVER_ERROR', 'code': 500 },
+            { 'name': 'SERVICE_UNAVAILABLE', 'code': 503 },
+            { 'name': 'GATEWAY_TIMEOUT', 'code': 504 }
+        ];
+    }
+    ConstantsService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
+        __metadata('design:paramtypes', [])
+    ], ConstantsService);
+    return ConstantsService;
+}());
+//# sourceMappingURL=C:/workspace/WEASEL PROYECT/weasel/src/constants.service.js.map
+
+/***/ },
+
+/***/ 521:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -560,8 +607,8 @@ var FolderComponent = (function () {
     FolderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-folder',
-            template: __webpack_require__(701),
-            styles: [__webpack_require__(690)]
+            template: __webpack_require__(702),
+            styles: [__webpack_require__(691)]
         }), 
         __metadata('design:paramtypes', [(typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */]) === 'function' && _c) || Object])
     ], FolderComponent);
@@ -572,7 +619,7 @@ var FolderComponent = (function () {
 
 /***/ },
 
-/***/ 521:
+/***/ 522:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -615,8 +662,8 @@ var FooterComponent = (function () {
     FooterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-footer',
-            template: __webpack_require__(702),
-            styles: [__webpack_require__(691)]
+            template: __webpack_require__(703),
+            styles: [__webpack_require__(692)]
         }), 
         __metadata('design:paramtypes', [])
     ], FooterComponent);
@@ -627,7 +674,7 @@ var FooterComponent = (function () {
 
 /***/ },
 
-/***/ 522:
+/***/ 523:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -729,8 +776,8 @@ var HeaderComponent = (function () {
     HeaderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-header',
-            template: __webpack_require__(703),
-            styles: [__webpack_require__(692)]
+            template: __webpack_require__(704),
+            styles: [__webpack_require__(693)]
         }), 
         __metadata('design:paramtypes', [(typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr__["ToastsManager"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr__["ToastsManager"]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]) === 'function' && _e) || Object])
     ], HeaderComponent);
@@ -741,7 +788,7 @@ var HeaderComponent = (function () {
 
 /***/ },
 
-/***/ 523:
+/***/ 524:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -791,8 +838,8 @@ var ListComponent = (function () {
     ListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-list',
-            template: __webpack_require__(704),
-            styles: [__webpack_require__(693)]
+            template: __webpack_require__(705),
+            styles: [__webpack_require__(694)]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */]) === 'function' && _b) || Object])
     ], ListComponent);
@@ -803,20 +850,20 @@ var ListComponent = (function () {
 
 /***/ },
 
-/***/ 524:
+/***/ 525:
 /***/ function(module, exports) {
 
 //# sourceMappingURL=C:/workspace/WEASEL PROYECT/weasel/src/rest.js.map
 
 /***/ },
 
-/***/ 525:
+/***/ 526:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__process_service__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rest__ = __webpack_require__(524);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rest__ = __webpack_require__(525);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__rest___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__rest__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__folder__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__folder___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__folder__);
@@ -863,8 +910,8 @@ var RestComponent = (function () {
     RestComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-rest',
-            template: __webpack_require__(705),
-            styles: [__webpack_require__(694)]
+            template: __webpack_require__(706),
+            styles: [__webpack_require__(695)]
         }), 
         __metadata('design:paramtypes', [(typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */]) === 'function' && _c) || Object])
     ], RestComponent);
@@ -875,7 +922,7 @@ var RestComponent = (function () {
 
 /***/ },
 
-/***/ 526:
+/***/ 527:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -971,8 +1018,8 @@ var SearchComponent = (function () {
     SearchComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-search',
-            template: __webpack_require__(706),
-            styles: [__webpack_require__(695)]
+            template: __webpack_require__(707),
+            styles: [__webpack_require__(696)]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr__["ToastsManager"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_ng2_toastr_ng2_toastr__["ToastsManager"]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewContainerRef"]) === 'function' && _d) || Object])
     ], SearchComponent);
@@ -983,7 +1030,7 @@ var SearchComponent = (function () {
 
 /***/ },
 
-/***/ 527:
+/***/ 528:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1039,8 +1086,8 @@ var SwitchComponent = (function () {
     SwitchComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-switch',
-            template: __webpack_require__(707),
-            styles: [__webpack_require__(696)]
+            template: __webpack_require__(708),
+            styles: [__webpack_require__(697)]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__process_service__["a" /* ProcessService */]) === 'function' && _b) || Object])
     ], SwitchComponent);
@@ -1051,7 +1098,7 @@ var SwitchComponent = (function () {
 
 /***/ },
 
-/***/ 528:
+/***/ 529:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1063,41 +1110,41 @@ var environment = {
 
 /***/ },
 
-/***/ 529:
+/***/ 530:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(543);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(544);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(536);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(537);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(532);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(533);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(538);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(539);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(537);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(538);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(535);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(536);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(534);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(535);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(542);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(543);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(531);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(532);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(530);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(531);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(540);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(541);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(533);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(534);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(541);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(542);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(539);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(540);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(544);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(545);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(727);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(728);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__);
 
 
@@ -1119,13 +1166,6 @@ var environment = {
 
 /***/ },
 
-/***/ 687:
-/***/ function(module, exports) {
-
-module.exports = ""
-
-/***/ },
-
 /***/ 688:
 /***/ function(module, exports) {
 
@@ -1136,130 +1176,137 @@ module.exports = ""
 /***/ 689:
 /***/ function(module, exports) {
 
-module.exports = ".breadcrumb{\r\n  background-color: transparent;\r\n  color: #00bfff;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  margin: initial;\r\n  padding: initial;\r\n}\r\n\r\n.breadcrumb ol{\r\n  list-style-type: none;\r\n  margin: initial;\r\n  padding: initial;\r\n}\r\n\r\n/*.breadcrumb ol li:before{\r\n  content: ' > '\r\n}*/\r\n\r\n.breadcrumb ol:last-child{\r\n  color: #a2a2a2;\r\n}\r\n\r\n.breadcrumb ol li{\r\n  cursor: pointer;\r\n}\r\n"
+module.exports = ""
 
 /***/ },
 
 /***/ 690:
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = ".breadcrumb{\r\n  background-color: transparent;\r\n  color: #00bfff;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  margin: initial;\r\n  padding: initial;\r\n}\r\n\r\n.breadcrumb ol{\r\n  list-style-type: none;\r\n  margin: initial;\r\n  padding: initial;\r\n}\r\n\r\n/*.breadcrumb ol li:before{\r\n  content: ' > '\r\n}*/\r\n\r\n.breadcrumb ol:last-child{\r\n  color: #a2a2a2;\r\n}\r\n\r\n.breadcrumb ol li:not(last-child){\r\n  cursor: pointer;\r\n}\r\n"
 
 /***/ },
 
 /***/ 691:
 /***/ function(module, exports) {
 
-module.exports = "i{\r\n  cursor: pointer;\r\n}\r\n"
+module.exports = ""
 
 /***/ },
 
 /***/ 692:
 /***/ function(module, exports) {
 
-module.exports = ".submenu{\r\n  height: 38px;\r\n  padding-bottom: 0px;\r\n  padding-top: 0px;\r\n}\r\n"
+module.exports = "i{\r\n  cursor: pointer;\r\n}\r\n"
 
 /***/ },
 
 /***/ 693:
 /***/ function(module, exports) {
 
-module.exports = "\r\n"
+module.exports = ".submenu{\r\n  height: 38px;\r\n  padding-bottom: 0px;\r\n  padding-top: 0px;\r\n}\r\n"
 
 /***/ },
 
 /***/ 694:
 /***/ function(module, exports) {
 
-module.exports = ".grey{\r\n  color: #d6d6d6;\r\n}\r\n"
+module.exports = "\r\n"
 
 /***/ },
 
 /***/ 695:
 /***/ function(module, exports) {
 
-module.exports = ".offcanvas{\r\n  position: absolute;\r\n  top: 0;\r\n  height: 100%;\r\n  width: 25%;\r\n  padding: 2%;\r\n  background-color: #3b3e40;\r\n  color: #FFF;\r\n  left: 100%;\r\n  -webkit-transition: 600ms;\r\n  transition: 600ms;\r\n}\r\n\r\n.open{\r\n  -webkit-transition: 600ms;\r\n  transition: 600ms;\r\n  left: 75%;\r\n}\r\n\r\n.offcanvas .fa{\r\n  position: absolute;\r\n  left: 90%;\r\n  z-index: 1;\r\n}\r\n"
+module.exports = ".grey{\r\n  color: #d6d6d6;\r\n}\r\n"
 
 /***/ },
 
 /***/ 696:
 /***/ function(module, exports) {
 
-module.exports = "/* The switch - the box around the slider */\r\n.switch {\r\n  position: relative;\r\n  margin: initial;\r\n  display: inline-block;\r\n  width: 60px;\r\n  height: 34px;\r\n}\r\n\r\n/* Hide default HTML checkbox */\r\n.switch input {display:none;}\r\n\r\n/* The slider */\r\n.slider {\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  -webkit-transition: .4s;\r\n  transition: .4s;\r\n}\r\n\r\n.slider:before {\r\n  position: absolute;\r\n  content: \"\";\r\n  height: 26px;\r\n  width: 26px;\r\n  left: 4px;\r\n  bottom: 4px;\r\n  background-color: white;\r\n  -webkit-transition: .4s;\r\n  transition: .4s;\r\n}\r\n\r\ninput:checked + .slider {\r\n  background-color: #2196F3;\r\n}\r\n\r\ninput:focus + .slider {\r\n  box-shadow: 0 0 1px #2196F3;\r\n}\r\n\r\ninput:checked + .slider:before {\r\n  -webkit-transform: translateX(26px);\r\n  transform: translateX(26px);\r\n}\r\n\r\n/* Rounded sliders */\r\n.slider.round {\r\n  border-radius: 34px;\r\n}\r\n\r\n.slider.round:before {\r\n  border-radius: 50%;\r\n}\r\n"
+module.exports = ".offcanvas{\r\n  position: absolute;\r\n  top: 0;\r\n  height: 100%;\r\n  width: 25%;\r\n  padding: 2%;\r\n  background-color: #3b3e40;\r\n  color: #FFF;\r\n  left: 100%;\r\n  -webkit-transition: 600ms;\r\n  transition: 600ms;\r\n}\r\n\r\n.open{\r\n  -webkit-transition: 600ms;\r\n  transition: 600ms;\r\n  left: 75%;\r\n}\r\n\r\n.offcanvas .fa{\r\n  position: absolute;\r\n  left: 90%;\r\n  z-index: 1;\r\n}\r\n"
 
 /***/ },
 
-/***/ 698:
+/***/ 697:
 /***/ function(module, exports) {
 
-module.exports = "\r\n<!-- Create Folder -->\r\n<div class=\"modal fade\" id=\"folderModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\" id=\"exampleModalLabel\">Create Folder</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">Name</label>\r\n          <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"My folder\" [(ngModel)]=\"_newFolder.name\">\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\" (click)=\"createFolder()\">Save</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Create Rest -->\r\n<div class=\"modal fade\" id=\"restModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\" id=\"exampleModalLabel\">Create Rest</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputEmail1\">Name</label>\r\n          <input class=\"form-control\" placeholder=\"My rest\" [(ngModel)]=\"_newRest.name\">\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputEmail1\">Path (without domain)</label>\r\n          <input class=\"form-control\" placeholder=\"/list/users\" [(ngModel)]=\"_newRest.path\">\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleSelect2\">Response (deshabilitado)</label>\r\n          <textarea class=\"form-control\" rows=\"10\" placeholder=\"{json:'example'}\" [(ngModel)]=\"_newRest.response\"></textarea>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\" (click)=\"createRest()\">Create Rest</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Set Options -->\r\n<div class=\"modal fade\" id=\"optionsModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\" id=\"exampleModalLabel\">Options</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">Port</label>\r\n          <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"7011\" [(ngModel)]=\"_options.port\">\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\" (click)=\"saveOptions()\">Save</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "/* The switch - the box around the slider */\r\n.switch {\r\n  position: relative;\r\n  margin: initial;\r\n  display: inline-block;\r\n  width: 60px;\r\n  height: 34px;\r\n}\r\n\r\n/* Hide default HTML checkbox */\r\n.switch input {display:none;}\r\n\r\n/* The slider */\r\n.slider {\r\n  position: absolute;\r\n  cursor: pointer;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background-color: #ccc;\r\n  -webkit-transition: .4s;\r\n  transition: .4s;\r\n}\r\n\r\n.slider:before {\r\n  position: absolute;\r\n  content: \"\";\r\n  height: 26px;\r\n  width: 26px;\r\n  left: 4px;\r\n  bottom: 4px;\r\n  background-color: white;\r\n  -webkit-transition: .4s;\r\n  transition: .4s;\r\n}\r\n\r\ninput:checked + .slider {\r\n  background-color: #2196F3;\r\n}\r\n\r\ninput:focus + .slider {\r\n  box-shadow: 0 0 1px #2196F3;\r\n}\r\n\r\ninput:checked + .slider:before {\r\n  -webkit-transform: translateX(26px);\r\n  transform: translateX(26px);\r\n}\r\n\r\n/* Rounded sliders */\r\n.slider.round {\r\n  border-radius: 34px;\r\n}\r\n\r\n.slider.round:before {\r\n  border-radius: 50%;\r\n}\r\n"
 
 /***/ },
 
 /***/ 699:
 /***/ function(module, exports) {
 
-module.exports = "<app-header [folder]=\"$folder\" (folderChange)=\"$folder=$event\"></app-header>\r\n<body class=\"p-5\">\r\n  <!--<router-outlet></router-outlet>-->\r\n  <app-list [folder]=\"$folder\" (folderChange)=\"folderChange($event)\"></app-list>\r\n</body>\r\n<app-footer [directories]=\"breadcrumb\" [folder]=\"$folder\" (folderChange)=\"$folder=$event\"></app-footer>\r\n\r\n<app-search [folder]=\"$folder\" (folderChange)=\"$folder=$event\"></app-search>\r\n"
+module.exports = "\r\n<!-- Create Folder -->\r\n<div class=\"modal fade\" id=\"folderModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"folderModal\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Create Folder</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"name\">Name</label>\r\n          <input  type=\"text\" value=\"\" class=\"form-control\" placeholder=\"My folder\" [(ngModel)]=\"_newFolder.name\">\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\" (click)=\"createFolder()\">Save</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Create Rest -->\r\n<div class=\"modal fade\" id=\"restModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"restModal\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Create Rest</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"name\">Name</label>\r\n          <input class=\"form-control\" placeholder=\"My rest\" [(ngModel)]=\"_newRest.name\">\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n          <label for=\"path\">Path (without domain)</label>\r\n          <input class=\"form-control\" placeholder=\"/list/users\" [(ngModel)]=\"_newRest.path\">\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n          <label for=\"status\">Status</label>\r\n          <select class=\"form-control\" [(ngModel)]=\"_newRest.status\">\r\n            <option *ngFor=\"let status of statusList.LIST_STATUS\" [ngValue]=\"status.code\">{{status.code}} - {{status.name}}</option>\r\n          </select>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n          <label for=\"response\">Response (deshabilitado)</label>\r\n          <textarea class=\"form-control\" rows=\"10\" placeholder=\"{json:'example'}\" [(ngModel)]=\"_newRest.response\"></textarea>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\" (click)=\"createRest()\">Create Rest</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Set Options -->\r\n<div class=\"modal fade\" id=\"optionsModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"optionsModal\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\">Options</h5>\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n          <span aria-hidden=\"true\">&times;</span>\r\n        </button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"port\">Port</label>\r\n          <input type=\"text\" value=\"\" class=\"form-control\" placeholder=\"7011\" [(ngModel)]=\"_options.port\">\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\" (click)=\"saveOptions()\">Save</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ },
 
 /***/ 700:
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"breadcrumb\">\r\n  <ol *ngFor=\"let directory of directories\">\r\n    <li (click)=\"navigate(directory)\"> > {{directory}} </li>\r\n  </ol>\r\n</nav>\r\n"
+module.exports = "<app-header [folder]=\"$folder\" (folderChange)=\"$folder=$event\"></app-header>\r\n<body class=\"p-5\">\r\n  <!--<router-outlet></router-outlet>-->\r\n  <app-list [folder]=\"$folder\" (folderChange)=\"folderChange($event)\"></app-list>\r\n</body>\r\n<app-footer [directories]=\"breadcrumb\" [folder]=\"$folder\" (folderChange)=\"$folder=$event\"></app-footer>\r\n\r\n<app-search [folder]=\"$folder\" (folderChange)=\"$folder=$event\"></app-search>\r\n"
 
 /***/ },
 
 /***/ 701:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-11\">\r\n    <h4 class=\"\">{{folder}}</h4>\r\n  </div>\r\n  <div class=\"col-md-1\">\r\n    <i class=\"fa fa-times grey fa-1\" (click)=\"openConfirm($event)\"></i>\r\n  </div>\r\n</div>\r\n<hr>\r\n\r\n<!-- Modal de confirmación -->\r\n<div class=\"modal fade\" id=\"confirmDeleteFolder-{{folder}}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">¿Está seguro que desea eliminar todo el contenido?</label>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-error\" (click)=\"delete($event)\">Aceptar</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeConfirm($event)\">Cancelar</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<nav class=\"breadcrumb\">\r\n  <ol *ngFor=\"let directory of directories\">\r\n    <li (click)=\"navigate(directory)\">&nbsp; > {{directory}} </li>\r\n  </ol>\r\n</nav>\r\n"
 
 /***/ },
 
 /***/ 702:
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"navbar fixed-bottom navbar-inverse bg-inverse\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-1\">\r\n      <a class=\"navbar-brand\" href=\"#\">\r\n        <img src=\"../assets/weasel-logo-inverse.png\" width=\"50\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\r\n      </a>\r\n    </div>\r\n    <div class=\"col-md-5 pt-2\">\r\n      <app-breadcrumb [directories]=\"directories\" [folder]=\"folder\" (folderChange)=\"emitParent($event)\"></app-breadcrumb>\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n      <div class=\"row\" [hidden]=\"$isStarted\">\r\n        <!--<div class=\"col\">\r\n          <i class=\"fa fa-pencil-square-o fa-2x text-white\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#restModal\"></i>\r\n        </div>-->\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-folder-o fa-2x text-white\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#folderModal\"></i>\r\n        </div>\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-plus fa-2x text-white\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#restModal\"></i>\r\n        </div>\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-cog fa-2x text-white\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#optionsModal\"></i>\r\n          <samp class=\"text-white\" id=\"port\"></samp>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\" [hidden]=\"!$isStarted\">\r\n        <!--<div class=\"col\">\r\n          <i class=\"fa fa-pencil-square-o fa-2x text-white\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#restModal\"></i>\r\n        </div>-->\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-folder-o fa-2x text-muted\" aria-hidden=\"true\"></i>\r\n        </div>\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-plus fa-2x text-muted\" aria-hidden=\"true\"></i>\r\n        </div>\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-cog fa-2x text-muted\" aria-hidden=\"true\"></i>\r\n          <samp class=\"text-white\" id=\"port\"></samp>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-2\" align=\"right\">\r\n      <app-switch [folder]=\"folder\" (isStarted)=\"$isStarted=$event\"></app-switch>\r\n      <h1 class=\"text-white\"></h1>\r\n    </div>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-11\">\r\n    <h4 class=\"\">{{folder}}</h4>\r\n  </div>\r\n  <div class=\"col-md-1\">\r\n    <i class=\"fa fa-times grey fa-1\" (click)=\"openConfirm($event)\"></i>\r\n  </div>\r\n</div>\r\n<hr>\r\n\r\n<!-- Modal de confirmación -->\r\n<div class=\"modal fade\" id=\"confirmDeleteFolder-{{folder}}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">¿Está seguro que desea eliminar todo el contenido?</label>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-error\" (click)=\"delete($event)\">Aceptar</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeConfirm($event)\">Cancelar</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ },
 
 /***/ 703:
 /***/ function(module, exports) {
 
-module.exports = "<header>\r\n  <nav class=\"navbar navbar-toggleable-md navbar-inverse bg-inverse\">\r\n    <div class=\"row\">\r\n      <div class=\"col\">\r\n        <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n          <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n        <a class=\"navbar-brand\" href=\"#\">Weasel</a>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col\" align=\"right\">\r\n      <i class=\"fa fa-bars fa-2x text-white\" (click)=\"openModal()\"></i>\r\n    </div>\r\n  </nav>\r\n  <nav class=\"navbar navbar-toggleable-md submenu bg-faded\" *ngIf=\"folder\">\r\n    <div class=\"col-md-10\">\r\n      <h4 class=\"text-muted\">{{folder.name}}</h4>\r\n    </div>\r\n\r\n    <div class=\"col-md-1\" align=\"right\">\r\n      <a href=\"#\" (click)=\"export()\">Export</a>\r\n    </div>\r\n    <div class=\"col-md-1\" align=\"right\">\r\n      <input id=\"fileInput\" type=\"file\" [hidden]=\"true\" (change)=\"fileChanged($event)\">\r\n      <a href=\"#\" (click)=\"searchFile()\">Import</a>\r\n    </div>\r\n  </nav>\r\n</header>\r\n\r\n<!-- Modal de confirmación -->\r\n<div class=\"modal fade\" id=\"confirmIncludeRests\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">¿Desea incluir los rest de esta importación a la lista?</label>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"import(true)\">Sí</button>\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"import(false)\">No</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<nav class=\"navbar fixed-bottom navbar-inverse bg-inverse\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-1 pt-2\">\r\n      <a class=\"navbar-brand\" href=\"#\">\r\n        <img src=\"../assets/weasel-logo-inverse.png\" width=\"50\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\r\n      </a>\r\n    </div>\r\n    <div class=\"col-md-5 pt-3\">\r\n      <app-breadcrumb [directories]=\"directories\" [folder]=\"folder\" (folderChange)=\"emitParent($event)\"></app-breadcrumb>\r\n    </div>\r\n    <div class=\"col-md-4 pt-2\">\r\n      <div class=\"row\" [hidden]=\"$isStarted\">\r\n        <!--<div class=\"col\">\r\n          <i class=\"fa fa-pencil-square-o fa-2x text-white\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#restModal\"></i>\r\n        </div>-->\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-folder-o fa-2x text-white\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#folderModal\"></i>\r\n        </div>\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-plus fa-2x text-white\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#restModal\"></i>\r\n        </div>\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-cog fa-2x text-white\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#optionsModal\"></i>\r\n          <samp class=\"text-white\" id=\"port\"></samp>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\" [hidden]=\"!$isStarted\">\r\n        <!--<div class=\"col\">\r\n          <i class=\"fa fa-pencil-square-o fa-2x text-white\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#restModal\"></i>\r\n        </div>-->\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-folder-o fa-2x text-muted\" aria-hidden=\"true\"></i>\r\n        </div>\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-plus fa-2x text-muted\" aria-hidden=\"true\"></i>\r\n        </div>\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-cog fa-2x text-muted\" aria-hidden=\"true\"></i>\r\n          <samp class=\"text-white\" id=\"port\"></samp>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-2 pt-2\" align=\"right\">\r\n      <app-switch [folder]=\"folder\" (isStarted)=\"$isStarted=$event\"></app-switch>\r\n      <h1 class=\"text-white\"></h1>\r\n    </div>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ },
 
 /***/ 704:
 /***/ function(module, exports) {
 
-module.exports = "\r\n<div class=\"container mx-auto\" *ngIf=\"folder\">\r\n\r\n  <div class=\"\" *ngIf=\"folder.folders.length\">\r\n    <div class=\"test\" *ngFor=\"let folderChild of folder.folders\">\r\n      <app-folder [folder]=\"folderChild\" [folderParent]=\"folder\" (folderChange)=\"folder=$event\" (click)=\"getFolder(folderChild)\"></app-folder>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"\" *ngIf=\"folder.content.length\">\r\n    <div class=\"test\" *ngFor=\"let rest of folder.content\">\r\n      <app-rest [folder]=\"folder\" [rest]=\"rest\" (folderChange)=\"emitParent($event)\"></app-rest>\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n"
+module.exports = "<header>\r\n  <nav class=\"navbar navbar-toggleable-md navbar-inverse bg-inverse\">\r\n    <div class=\"row\">\r\n      <div class=\"col\">\r\n        <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n          <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n        <a class=\"navbar-brand\" href=\"#\">Weasel</a>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"col\" align=\"right\">\r\n      <i class=\"fa fa-bars fa-2x text-white\" (click)=\"openModal()\"></i>\r\n    </div>\r\n  </nav>\r\n  <nav class=\"navbar navbar-toggleable-md submenu bg-faded\" *ngIf=\"folder\">\r\n    <div class=\"col-md-10\">\r\n      <h4 class=\"text-muted\">{{folder.name}}</h4>\r\n    </div>\r\n\r\n    <div class=\"col-md-1\" align=\"right\">\r\n      <a href=\"#\" (click)=\"export()\">Export</a>\r\n    </div>\r\n    <div class=\"col-md-1\" align=\"right\">\r\n      <input id=\"fileInput\" type=\"file\" [hidden]=\"true\" (change)=\"fileChanged($event)\">\r\n      <a href=\"#\" (click)=\"searchFile()\">Import</a>\r\n    </div>\r\n  </nav>\r\n</header>\r\n\r\n<!-- Modal de confirmación -->\r\n<div class=\"modal fade\" id=\"confirmIncludeRests\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">¿Desea incluir los rest de esta importación a la lista?</label>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"import(true)\">Sí</button>\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"import(false)\">No</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ },
 
 /***/ 705:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-11\">\r\n      <h4 class=\"\">{{rest.name}}</h4>\r\n    </div>\r\n    <div class=\"col-md-1\">\r\n      <i class=\"fa fa-times grey fa-1\" (click)=\"removeRest()\"></i>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col\">\r\n      <p class=\"\">{{rest.path}}</p>\r\n    </div>\r\n  </div>\r\n</div>\r\n<hr>\r\n"
+module.exports = "\r\n<div class=\"container mx-auto\" *ngIf=\"folder\">\r\n\r\n  <div class=\"\" *ngIf=\"folder.folders.length\">\r\n    <div class=\"test\" *ngFor=\"let folderChild of folder.folders\">\r\n      <app-folder [folder]=\"folderChild\" [folderParent]=\"folder\" (folderChange)=\"folder=$event\" (click)=\"getFolder(folderChild)\"></app-folder>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"\" *ngIf=\"folder.content.length\">\r\n    <div class=\"test\" *ngFor=\"let rest of folder.content\">\r\n      <app-rest [folder]=\"folder\" [rest]=\"rest\" (folderChange)=\"emitParent($event)\"></app-rest>\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ },
 
 /***/ 706:
 /***/ function(module, exports) {
 
-module.exports = "<!-- Modal de los botones añadir -->\r\n<app-add [folder]=\"folder\" (folderChange)=\"emitParent($event)\" (restChange)=\"getRests()\"></app-add>\r\n\r\n<!-- Off canvas del buscador -->\r\n<div class=\"offcanvas\">\r\n  <i class=\"fa fa-times fa-2x text-white\" (click)=\"dismiss()\"></i>\r\n  <div class=\"row mb-4\">\r\n    <div class=\"col\">\r\n      <div class=\"form-inline my-2 my-lg-0\">\r\n        <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" [(ngModel)]=\"nameFilter\">\r\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col\">\r\n      <div *ngFor=\"let rest of (rests | byname: nameFilter)\">\r\n\r\n        <div class=\"\" (click)=\"validateToAdd(rest)\">\r\n          <div class=\"row\">\r\n            <div class=\"col-md-10\">\r\n              <h4 class=\"\">{{rest.name}}</h4>\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n              <i><small class=\"text-danger\" (click)=\"openConfirm(rest, $event)\">Delete</small></i>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col\">\r\n              <p class=\"\">{{rest.path}}</p>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n      </div>\r\n      <hr>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Modal de confirmación -->\r\n<div class=\"modal fade\" id=\"confirmDeleteRest\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">Este servicio se eliminará de todos los directorios donde fue agregado ¿Está seguro que desea eliminarlo?</label>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-error\" (click)=\"deleteRest()\">Aceptar</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeConfirm()\">Cancelar</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- ARREGLAR ESTA COCHINADA!!!!! -->\r\n<button id=\"getRests\" type=\"button\" name=\"button\" [hidden]=\"true\" (click)=\"getRests()\"></button>\r\n"
+module.exports = "<div class=\"\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-11\">\r\n      <h4 class=\"\">{{rest.name}}</h4>\r\n    </div>\r\n    <div class=\"col-md-1\">\r\n      <i class=\"fa fa-times grey fa-1\" (click)=\"removeRest()\"></i>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col\">\r\n      <p class=\"\">{{rest.path}}</p>\r\n    </div>\r\n  </div>\r\n</div>\r\n<hr>\r\n"
 
 /***/ },
 
 /***/ 707:
 /***/ function(module, exports) {
 
+module.exports = "<!-- Modal de los botones añadir -->\r\n<app-add [folder]=\"folder\" (folderChange)=\"emitParent($event)\" (restChange)=\"getRests()\"></app-add>\r\n\r\n<!-- Off canvas del buscador -->\r\n<div class=\"offcanvas\">\r\n  <i class=\"fa fa-times fa-2x text-white\" (click)=\"dismiss()\"></i>\r\n  <div class=\"row mb-4\">\r\n    <div class=\"col\">\r\n      <div class=\"form-inline my-2 my-lg-0\">\r\n        <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" [(ngModel)]=\"nameFilter\">\r\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col\">\r\n      <div *ngFor=\"let rest of (rests | byname: nameFilter)\">\r\n\r\n        <div class=\"\" (click)=\"validateToAdd(rest)\">\r\n          <div class=\"row\">\r\n            <div class=\"col-md-10\">\r\n              <h4 class=\"\">{{rest.name}}</h4>\r\n            </div>\r\n            <div class=\"col-md-2\">\r\n              <i><small class=\"text-danger\" (click)=\"openConfirm(rest, $event)\">Delete</small></i>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col\">\r\n              <p class=\"\">{{rest.path}}</p>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n      </div>\r\n      <hr>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Modal de confirmación -->\r\n<div class=\"modal fade\" id=\"confirmDeleteRest\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog\" role=\"document\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-body\">\r\n        <div class=\"form-group\">\r\n          <label for=\"exampleInputPassword1\">Este servicio se eliminará de todos los directorios donde fue agregado ¿Está seguro que desea eliminarlo?</label>\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-error\" (click)=\"deleteRest()\">Aceptar</button>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"closeConfirm()\">Cancelar</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- ARREGLAR ESTA COCHINADA!!!!! -->\r\n<button id=\"getRests\" type=\"button\" name=\"button\" [hidden]=\"true\" (click)=\"getRests()\"></button>\r\n"
+
+/***/ },
+
+/***/ 708:
+/***/ function(module, exports) {
+
 module.exports = "<label class=\"switch\">\r\n  <input type=\"checkbox\" [(ngModel)]=\"checkSelected\" (ngModelChange)=\"onChange(checkSelected)\">\r\n  <div class=\"slider round\"></div>\r\n</label>\r\n"
 
 /***/ },
 
-/***/ 728:
+/***/ 729:
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(392);
@@ -1267,5 +1314,5 @@ module.exports = __webpack_require__(392);
 
 /***/ }
 
-},[728]);
+},[729]);
 //# sourceMappingURL=main.bundle.map
