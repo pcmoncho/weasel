@@ -653,8 +653,17 @@ var FooterComponent = (function () {
     FooterComponent.prototype.validateProperty = function (obj, property) {
         return obj.hasOwnProperty(property);
     };
+    FooterComponent.prototype.hasGroups = function () {
+        var _hasGroups = false;
+        if (this.folder.hasOwnProperty('groups')) {
+            if (this.folder.groups.length) {
+                _hasGroups = true;
+            }
+        }
+        return _hasGroups;
+    };
     FooterComponent.prototype.isNotRunneable = function () {
-        var _isNotRunneable = true;
+        var _isNotRunneable = false;
         if (this.folder.content.length) {
             _isNotRunneable = false;
         }
@@ -785,7 +794,7 @@ var HeaderComponent = (function () {
         this.reader.readAsText(event.target.files[0]);
     };
     HeaderComponent.prototype.isNotRunneable = function () {
-        var _isNotRunneable = true;
+        var _isNotRunneable = false;
         if (this.folder) {
             if (this.folder.content.length) {
                 _isNotRunneable = false;
@@ -1837,7 +1846,7 @@ module.exports = "<nav class=\"breadcrumb\">\r\n  <ol *ngFor=\"let directory of 
 /***/ 716:
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar fixed-bottom navbar-inverse bg-inverse\" *ngIf=\"folder\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-1 pt-2\">\r\n      <a class=\"navbar-brand tooltip-ws\" href=\"#\">\r\n        <img src=\"../assets/weasel-logo-inverse.png\" title=\"Psst! try with konami code\" width=\"50\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\r\n      </a>\r\n    </div>\r\n    <div class=\"col-md-6 pt-3\">\r\n      <app-breadcrumb [directories]=\"directories\" [folder]=\"folder\" (folderChange)=\"emitParent($event)\" [hidden]=\"isRunning\"></app-breadcrumb>\r\n      <span [hidden]=\"!isRunning\" class=\"text-info\">Para navegar debe bajar los servicios</span>\r\n    </div>\r\n    <div class=\"col-md-3 pt-2\">\r\n      <div class=\"row\">\r\n        <div class=\"col\" *ngIf=\"!folder.content.length\" [hidden]=\"!isNotRunneable()\">\r\n          <i class=\"fa fa-folder-o fa-2x text-white tooltip-ws\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#folderModal\" [hidden]=\"isRunning\">\r\n            <span class=\"tooltiptext\">New folder</span>\r\n          </i>\r\n          <i class=\"fa fa-folder-o fa-2x text-muted\" aria-hidden=\"true\" [hidden]=\"!isRunning\"></i>\r\n        </div>\r\n        <div class=\"col\" [hidden]=\"isNotRunneable()\">\r\n          <i class=\"fa fa-plus fa-2x text-white tooltip-ws\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#restModal\" [hidden]=\"isRunning\">\r\n            <span class=\"tooltiptext\">New service rest</span>\r\n          </i>\r\n          <i class=\"fa fa-plus fa-2x text-muted\" aria-hidden=\"true\" [hidden]=\"!isRunning\"></i>\r\n        </div>\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-cog fa-2x text-white tooltip-ws\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#optionsModal\" [hidden]=\"isRunning\">\r\n            <span class=\"tooltiptext\">Change port</span>\r\n          </i>\r\n          <i class=\"fa fa-cog fa-2x text-muted\" aria-hidden=\"true\" [hidden]=\"!isRunning\"></i>\r\n          <samp class=\"text-white\" id=\"port\"></samp>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-2 pt-2\" align=\"right\" [hidden]=\"isNotRunneable()\">\r\n      <label class=\"switch tooltip-ws\">\r\n        <input type=\"checkbox\" [(ngModel)]=\"isRunning\" (ngModelChange)=\"onChangeSwitch(isRunning)\">\r\n        <div class=\"slider round\"></div>\r\n        <span class=\"tooltiptext tooltip\">Start services</span>\r\n      </label>\r\n    </div>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar fixed-bottom navbar-inverse bg-inverse\" *ngIf=\"folder\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-1 pt-2\">\r\n      <a class=\"navbar-brand tooltip-ws\" href=\"#\">\r\n        <img src=\"../assets/weasel-logo-inverse.png\" title=\"Psst! try with konami code\" width=\"50\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\r\n      </a>\r\n    </div>\r\n    <div class=\"col-md-6 pt-3\">\r\n      <app-breadcrumb [directories]=\"directories\" [folder]=\"folder\" (folderChange)=\"emitParent($event)\" [hidden]=\"isRunning\"></app-breadcrumb>\r\n      <span [hidden]=\"!isRunning\" class=\"text-info\">Para navegar debe bajar los servicios</span>\r\n    </div>\r\n    <div class=\"col-md-3 pt-2\">\r\n      <div class=\"row\">\r\n        <div class=\"col\" *ngIf=\"!folder.content.length && !hasGroups()\">\r\n          <i class=\"fa fa-folder-o fa-2x text-white tooltip-ws\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#folderModal\" [hidden]=\"isRunning\">\r\n            <span class=\"tooltiptext\">New folder</span>\r\n          </i>\r\n          <i class=\"fa fa-folder-o fa-2x text-muted\" aria-hidden=\"true\" [hidden]=\"!isRunning\"></i>\r\n        </div>\r\n        <div class=\"col\" *ngIf=\"!folder.folders.length\">\r\n          <i class=\"fa fa-plus fa-2x text-white tooltip-ws\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#restModal\" [hidden]=\"isRunning\">\r\n            <span class=\"tooltiptext\">New service rest</span>\r\n          </i>\r\n          <i class=\"fa fa-plus fa-2x text-muted\" aria-hidden=\"true\" [hidden]=\"!isRunning\"></i>\r\n        </div>\r\n        <div class=\"col\">\r\n          <i class=\"fa fa-cog fa-2x text-white tooltip-ws\" aria-hidden=\"true\" data-toggle=\"modal\" data-target=\"#optionsModal\" [hidden]=\"isRunning\">\r\n            <span class=\"tooltiptext\">Change port</span>\r\n          </i>\r\n          <i class=\"fa fa-cog fa-2x text-muted\" aria-hidden=\"true\" [hidden]=\"!isRunning\"></i>\r\n          <samp class=\"text-white\" id=\"port\"></samp>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-2 pt-2\" align=\"right\" [hidden]=\"isNotRunneable()\">\r\n      <label class=\"switch tooltip-ws\">\r\n        <input type=\"checkbox\" [(ngModel)]=\"isRunning\" (ngModelChange)=\"onChangeSwitch(isRunning)\">\r\n        <div class=\"slider round\"></div>\r\n        <span class=\"tooltiptext tooltip\">Start services</span>\r\n      </label>\r\n    </div>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ }),
 
